@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/pizza_size"
+        android:id="@+id/textSize"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/sizeGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/textSize">
+        <RadioButton android:id="@+id/size_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:paddingRight="20dp"
+            android:text="@string/size_small"
+            android:checked="true" />
+        <RadioButton android:id="@+id/size_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:paddingRight="20dp"
+            android:text="@string/size_medium" />
+        <RadioButton android:id="@+id/size_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:paddingRight="20dp"
+            android:text="@string/size_large" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/select_pizza_crust"
+        android:layout_below="@+id/sizeGroup"
+        android:id="@+id/textSelectCrust"
+        android:paddingTop="20dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:id="@+id/btnHand"
+        android:layout_below="@+id/textSelectCrust"
+        android:text="@string/hand_crust"
+        android:drawableLeft="@drawable/hand"
+        android:textSize="40px"
+        android:textAllCaps="false"
+        android:onClick="onCrustSelected"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:id="@+id/btnThinCrispy"
+        android:layout_below="@+id/btnHand"
+        android:text="@string/thincrispy_crust"
+        android:drawableLeft="@drawable/thinncrispy"
+        android:textSize="40px"
+        android:textAllCaps="false"
+        android:onClick="onCrustSelected"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:id="@+id/btnNatural"
+        android:layout_below="@+id/btnThinCrispy"
+        android:text="@string/natural_crust"
+        android:drawableLeft="@drawable/natural"
+        android:textSize="40px"
+        android:textAllCaps="false"
+        android:onClick="onCrustSelected"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:id="@+id/btnPan"
+        android:text="@string/pan_crust"
+        android:layout_below="@+id/btnNatural"
+        android:drawableLeft="@drawable/pan"
+        android:textSize="40px"
+        android:textAllCaps="false"
+        android:onClick="onCrustSelected"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:id="@+id/btnStuffed"
+        android:text="@string/stuffed_crust"
+        android:layout_below="@+id/btnPan"
+        android:drawableLeft="@drawable/stuffedcrust"
+        android:textSize="40px"
+        android:textAllCaps="false"
+        android:onClick="onCrustSelected"/>
+
+</RelativeLayout>
